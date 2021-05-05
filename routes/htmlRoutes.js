@@ -22,8 +22,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/tables", (req, res) => {
-    console.log(tableData);
-    res.render(path.join(__dirname,'../views/pages/tables'),{tableData});
+    res.render(path.join(__dirname,'../views/pages/tables'),{tableData, waitListData});
   });
 
   app.get("/reserve", (req, res) => {
